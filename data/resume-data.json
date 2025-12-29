@@ -1,0 +1,76 @@
+{
+  "personal": {
+    "name": "Saurav Chaudhari",
+    "title": "Full Stack Developer",
+    "phone": "+91 8329373390",
+    "email": "chaudharisaurav356@gmail.com",
+    "linkedin": "https://linkedin.com/in/saurav-chaudhari",
+    "location": "Pune, Maharashtra",
+    "summary": "Innovative Full Stack Developer with 3 years of experience building transformative web and AI-driven solutions. Expert in process automation, AI/ML integration, and scalable SaaS platforms. Reduced operational timelines by 70% at Visaero through system architecture redesign. Passionate about cutting-edge technologies such as OCR, facial recognition, LLMs, and end-to-end AI/ML pipelines including model training and inferencing."
+  },
+  
+  "experience": [
+    {
+      "position": "Software Developer",
+      "company": "Visaero India Pvt. Ltd.",
+      "period": "Sept. 2022 - Present",
+      "achievements": [
+        "Architected mission-critical systems for global visa processing.",
+        "Automated Visa Offer Creation, reducing configuration time from 8–9 hours to 5–10 minutes by engineering a dynamic rule-based engine (React/Node.js).",
+        "Revolutionized Pricing System by building granular price and access management with real-time currency persistence to maintain original USD values during forex fluctuations.",
+        "Implemented cascade updating to auto-sync 200+ dependent offers when master prices change.",
+        "Scrum Master, achieving 100% sprint completion across 6 cycles through Agile optimization.",
+        "Built automated translation workflows to convert Arabic IDs and documents into English, creating visa-ready documentation for Schengen visa processing.",
+        "Led end-to-end development of Document Intelligence System, a complete AI pipeline for passport processing."
+      ],
+      "results": [
+        "Reduced passport data extraction latency from 3s to 1s while achieving 98.7% accuracy using Donut transformer",
+        "Implemented Photo Cross-Match via facial recognition to validate applicant photos",
+        "Developed intelligent document bundling logic to automatically sort documents per applicant",
+        "Automated the entire document intake process, reducing manual oversight by 95%"
+      ]
+    }
+  ],
+  
+  "projects": [
+    {
+      "name": "Document Classifier AI",
+      "tech": "Python, LLMs, DeepFace",
+      "description": "Engineered structured OCR system with 97% accuracy and integrated facial recognition to auto-categorize documents. Cut manual sorting time and organized documents automatically per user."
+    },
+    {
+      "name": "SaaStra Website Builder and CRM",
+      "tech": "Next.js",
+      "description": "Building drag-and-drop SaaS platform with real-time collaboration. Enabled subdomain hosting to eliminate domain costs."
+    },
+    {
+      "name": "Windows 10 Themed Portfolio",
+      "tech": "HTML, CSS, JavaScript",
+      "description": "Created interactive OS-style UI with desktop icons, start menu, and file explorer. Featured live system metrics and draggable windows.",
+      "links": {
+        "demo": "#",
+        "github": "#"
+      }
+    }
+  ],
+  
+  "skills": {
+    "technical": ["Node.js", "React", "Next.js", "MongoDB", "Python", "AWS", "FastAPI"],
+    "ai_ml": ["OCR (Donut, Tesseract)", "Facial Recognition (DeepFace)", "LLMs", "Generative AI", "Model Training & Inferencing"],
+    "professional": ["Leadership", "Problem Solving", "Agile/Scrum", "System Architecture", "SaaS Development"]
+  },
+  
+  "education": [
+    {
+      "degree": "B.Tech in Computer Science & Engineering",
+      "institution": "Dhole Patil College of Engineering, Pune",
+      "period": "2019 - 2023",
+      "details": "CGPA: 8.36"
+    }
+  ],
+  
+  "certifications": [
+    "AWS Solutions Architect by Stephane Maarek",
+    "Web Development Bootcamp (MERN Stack) by Angela Yu"
+  ]
+}

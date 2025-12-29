@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saurav Chaudhari - Resume</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      .template3 {
+        max-width: 1100px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .template3-header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 50px 40px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .template3-header::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 300px;
+        height: 300px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        transform: translate(100px, -100px);
+      }
+
+      .template3-header::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 200px;
+        height: 200px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 50%;
+        transform: translate(-50px, 50px);
+      }
+
+      .template3-name {
+        font-size: 3rem;
+        margin-bottom: 10px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .template3-title {
+        font-size: 1.5rem;
+        color: #ffd700;
+        margin-bottom: 20px;
+        position: relative;
+        z-index: 1;
+        font-weight: 500;
+      }
+
+      .template3-contact {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 25px;
+        margin-top: 25px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .template3-contact-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 10px 20px;
+        border-radius: 30px;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .template3-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        padding: 40px;
+      }
+
+      .template3-section {
+        margin-bottom: 35px;
+      }
+
+      .template3-section-title {
+        color: #667eea;
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 3px solid #ffd700;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .template3-section-title i {
+        color: #764ba2;
+      }
+
+      .job-title {
+        font-size: 1.3rem;
+        color: #2c3e50;
+        margin-bottom: 5px;
+        font-weight: 600;
+      }
+
+      .company {
+        font-size: 1.1rem;
+        color: #667eea;
+        margin-bottom: 5px;
+        font-weight: 600;
+      }
+
+      .date {
+        color: #7f8c8d;
+        font-size: 0.95rem;
+        margin-bottom: 15px;
+        font-style: italic;
+        background: #f8f9fa;
+        padding: 5px 10px;
+        border-radius: 4px;
+        display: inline-block;
+      }
+
+      .bullet-list {
+        margin-left: 20px;
+      }
+
+      .bullet-list li {
+        margin-bottom: 10px;
+        line-height: 1.6;
+        position: relative;
+        padding-left: 10px;
+      }
+
+      .bullet-list li::before {
+        content: "→";
+        color: #764ba2;
+        font-weight: bold;
+        position: absolute;
+        left: -15px;
+      }
+
+      .result-highlight {
+        background: linear-gradient(135deg, #e8f4fc 0%, #f0f8ff 100%);
+        padding: 20px;
+        border-radius: 10px;
+        margin: 20px 0;
+        border-left: 5px solid #667eea;
+        box-shadow: 0 3px 10px rgba(102, 126, 234, 0.1);
+      }
+
+      .skill-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .skill-tag {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-size: 0.95rem;
+        font-weight: 500;
+      }
+
+      .project-item {
+        background: #f8f9fa;
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #eee;
+        transition: transform 0.3s ease;
+      }
+
+      .project-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .project-title {
+        font-size: 1.2rem;
+        color: #2c3e50;
+        margin-bottom: 5px;
+        font-weight: 600;
+      }
+
+      .project-tech {
+        color: #764ba2;
+        font-weight: 600;
+        margin-bottom: 10px;
+        font-size: 0.95rem;
+        background: rgba(118, 75, 162, 0.1);
+        padding: 5px 10px;
+        border-radius: 4px;
+        display: inline-block;
+      }
+
+      .template3-controls {
+        padding: 20px;
+        text-align: center;
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        border-top: 1px solid #dee2e6;
+      }
+
+      .back-btn {
+        display: inline-block;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 12px 25px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 600;
+        margin: 0 10px;
+        border: none;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+      }
+
+      .back-btn:hover {
+        transform: translateY(-3px);
+      }
+
+      .print-btn {
+        display: inline-block;
+        background: #2c3e50;
+        color: white;
+        padding: 12px 25px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 600;
+        margin: 0 10px;
+        transition: transform 0.3s ease;
+      }
+
+      .print-btn:hover {
+        transform: translateY(-3px);
+      }
+
+      @media print {
+        .template3-controls {
+          display: none;
+        }
+
+        .template3 {
+          box-shadow: none;
+          border-radius: 0;
+        }
+
+        .template3-header::before,
+        .template3-header::after {
+          display: none;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .template3-content {
+          grid-template-columns: 1fr;
+          padding: 20px;
+          gap: 20px;
+        }
+
+        .template3-header {
+          padding: 30px 20px;
+        }
+
+        .template3-name {
+          font-size: 2.2rem;
+        }
+
+        .template3-contact {
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        .template3-contact-item {
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="template3">
+      <div class="template3-header">
+        <h1 class="template3-name" id="name">Loading...</h1>
+        <div class="template3-title" id="title">Full Stack Developer</div>
+        <div class="template3-contact" id="contact-info">
+          <!-- Will be populated by JavaScript -->
+        </div>
+      </div>
+
+      <div class="template3-content">
+        <div class="template3-left">
+          <div class="template3-section">
+            <h2 class="template3-section-title">
+              <i class="fas fa-user"></i> Profile
+            </h2>
+            <p id="summary">Loading...</p>
+          </div>
+
+          <div class="template3-section">
+            <h2 class="template3-section-title">
+              <i class="fas fa-briefcase"></i> Experience
+            </h2>
+            <div id="experience">
+              <!-- Will be populated by JavaScript -->
+            </div>
+          </div>
+
+          <div class="template3-section">
+            <h2 class="template3-section-title">
+              <i class="fas fa-graduation-cap"></i> Education
+            </h2>
+            <div id="education">
+              <!-- Will be populated by JavaScript -->
+            </div>
+          </div>
+        </div>
+
+        <div class="template3-right">
+          <div class="template3-section">
+            <h2 class="template3-section-title">
+              <i class="fas fa-star"></i> Skills
+            </h2>
+            <div id="skills">
+              <!-- Will be populated by JavaScript -->
+            </div>
+          </div>
+
+          <div class="template3-section">
+            <h2 class="template3-section-title">
+              <i class="fas fa-project-diagram"></i> Projects
+            </h2>
+            <div id="projects">
+              <!-- Will be populated by JavaScript -->
+            </div>
+          </div>
+
+          <div class="template3-section">
+            <h2 class="template3-section-title">
+              <i class="fas fa-certificate"></i> Certifications
+            </h2>
+            <ul class="bullet-list" id="certifications">
+              <!-- Will be populated by JavaScript -->
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="template3-controls">
+        <a href="../index.html" class="back-btn">
+          <i class="fas fa-arrow-left"></i> Back to Templates
+        </a>
+        <a href="#" class="print-btn" onclick="window.print();">
+          <i class="fas fa-print"></i> Print Resume
+        </a>
+      </div>
+    </div>
+
+    <script src="../js/resume-loader.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", async function () {
+        await resumeLoader.loadData();
+        const data = resumeLoader.data;
+
+        // Populate personal info
+        document.getElementById("name").textContent = data.personal.name;
+        document.getElementById("title").textContent = data.personal.title;
+        document.getElementById("summary").textContent = data.personal.summary;
+
+        // Populate contact info
+        const contactInfo = document.getElementById("contact-info");
+        contactInfo.innerHTML = `
+                <div class="template3-contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>${data.personal.phone}</span>
+                </div>
+                <div class="template3-contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>${data.personal.email}</span>
+                </div>
+                <div class="template3-contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </div>
+                <div class="template3-contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>${data.personal.location}</span>
+                </div>
+            `;
+
+        // Populate experience
+        document.getElementById("experience").innerHTML =
+          resumeLoader.renderExperience(data.experience);
+
+        // Populate projects
+        document.getElementById("projects").innerHTML =
+          resumeLoader.renderProjects(data.projects);
+
+        // Populate skills
+        const skills = document.getElementById("skills");
+        if (data.skills) {
+          let skillsHtml = "";
+
+          if (data.skills.technical && data.skills.technical.length > 0) {
+            skillsHtml += `<div class="skill-category">
+                        <h4 style="color: #2c3e50; margin-bottom: 10px;">Technical</h4>
+                        <div class="skill-tags">`;
+            data.skills.technical.forEach((skill) => {
+              skillsHtml += `<span class="skill-tag">${skill}</span>`;
+            });
+            skillsHtml += `</div></div>`;
+          }
+
+          if (data.skills.ai_ml && data.skills.ai_ml.length > 0) {
+            skillsHtml += `<div class="skill-category">
+                        <h4 style="color: #2c3e50; margin-bottom: 10px; margin-top: 20px;">AI/ML</h4>
+                        <div class="skill-tags">`;
+            data.skills.ai_ml.forEach((skill) => {
+              skillsHtml += `<span class="skill-tag">${skill}</span>`;
+            });
+            skillsHtml += `</div></div>`;
+          }
+
+          skills.innerHTML = skillsHtml;
+        }
+
+        // Populate education
+        const education = document.getElementById("education");
+        if (data.education && data.education.length > 0) {
+          let eduHtml = "";
+          data.education.forEach((edu) => {
+            eduHtml += `
+                        <div style="margin-bottom: 20px;">
+                            <h3 class="job-title">${edu.degree}</h3>
+                            <div class="company">${edu.institution}</div>
+                            <div class="date">${edu.period} | ${edu.details}</div>
+                        </div>
+                    `;
+          });
+          education.innerHTML = eduHtml;
+        }
+
+        // Populate certifications
+        const certs = document.getElementById("certifications");
+        if (data.certifications && data.certifications.length > 0) {
+          let certHtml = "";
+          data.certifications.forEach((cert) => {
+            certHtml += `<li>${cert}</li>`;
+          });
+          certs.innerHTML = certHtml;
+        }
+      });
+    </script>
+  </body>
+</html>

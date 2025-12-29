@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume Template Selector</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1><i class="fas fa-file-alt"></i> Resume Builder</h1>
+        <p class="subtitle">Select a template to view your resume</p>
+      </header>
+
+      <div class="template-grid">
+        <!-- Template 1: Traditional -->
+        <div class="template-card">
+          <div class="template-preview traditional-preview">
+            <div class="preview-header">
+              <h3>Saurav Chaudhari</h3>
+              <p>Full Stack Developer</p>
+            </div>
+            <div class="preview-sections">
+              <div class="preview-section"></div>
+              <div class="preview-section"></div>
+              <div class="preview-section"></div>
+            </div>
+          </div>
+          <div class="template-info">
+            <h3>Traditional</h3>
+            <p>Clean, professional single-column layout</p>
+            <a href="templates/template1.html" class="btn">Use Template</a>
+          </div>
+        </div>
+
+        <!-- Template 2: Modern -->
+        <div class="template-card">
+          <div class="template-preview modern-preview">
+            <div class="preview-sidebar"></div>
+            <div class="preview-main">
+              <div class="preview-section"></div>
+              <div class="preview-section"></div>
+            </div>
+          </div>
+          <div class="template-info">
+            <h3>Modern</h3>
+            <p>Two-column design with sidebar</p>
+            <a href="templates/template2.html" class="btn">Use Template</a>
+          </div>
+        </div>
+
+        <!-- Template 3: Creative -->
+        <div class="template-card">
+          <div class="template-preview creative-preview">
+            <div class="preview-header creative-header"></div>
+            <div class="preview-content">
+              <div class="preview-left"></div>
+              <div class="preview-right"></div>
+            </div>
+          </div>
+          <div class="template-info">
+            <h3>Creative</h3>
+            <p>Unique design with color accents</p>
+            <a href="templates/template3.html" class="btn">Use Template</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-info">
+        <h3><i class="fas fa-database"></i> Centralized Data Management</h3>
+        <p>
+          All templates use the same data from
+          <code>data/resume-data.json</code>
+        </p>
+        <p>
+          Update your information once, and it will reflect across all
+          templates.
+        </p>
+        <a href="data/resume-data.json" class="btn-outline" target="_blank">
+          <i class="fas fa-edit"></i> Edit Data File
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

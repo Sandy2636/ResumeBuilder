@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saurav Chaudhari - Resume</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      .template1 {
+        max-width: 900px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+
+      .template1-header {
+        background: linear-gradient(135deg, #2c3e50 0%, #4a6491 100%);
+        color: white;
+        padding: 40px;
+        text-align: center;
+      }
+
+      .template1-name {
+        font-size: 2.8rem;
+        margin-bottom: 10px;
+        letter-spacing: 1px;
+      }
+
+      .template1-title {
+        font-size: 1.4rem;
+        color: #3498db;
+        margin-bottom: 25px;
+      }
+
+      .template1-contact {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 25px;
+        margin-top: 20px;
+      }
+
+      .template1-contact-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .template1-section {
+        padding: 30px 40px;
+        border-bottom: 1px solid #eee;
+      }
+
+      .template1-section:last-child {
+        border-bottom: none;
+      }
+
+      .template1-section-title {
+        color: #2c3e50;
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #3498db;
+      }
+
+      .job-title {
+        font-size: 1.4rem;
+        color: #2c3e50;
+        margin-bottom: 5px;
+      }
+
+      .company {
+        font-size: 1.2rem;
+        color: #3498db;
+        margin-bottom: 5px;
+        font-weight: 600;
+      }
+
+      .date {
+        color: #7f8c8d;
+        font-style: italic;
+        margin-bottom: 15px;
+      }
+
+      .bullet-list {
+        margin-left: 20px;
+        margin-bottom: 15px;
+      }
+
+      .bullet-list li {
+        margin-bottom: 10px;
+        line-height: 1.6;
+      }
+
+      .result-highlight {
+        background: #e8f4fc;
+        padding: 15px;
+        border-radius: 8px;
+        margin: 20px 0;
+        border-left: 4px solid #3498db;
+      }
+
+      .result-highlight p {
+        margin-bottom: 8px;
+      }
+
+      .skill-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .skill-tag {
+        background: #ecf0f1;
+        padding: 8px 15px;
+        border-radius: 20px;
+        font-size: 0.95rem;
+        color: #2c3e50;
+      }
+
+      .project-item {
+        margin-bottom: 25px;
+      }
+
+      .project-title {
+        font-size: 1.3rem;
+        color: #2c3e50;
+        margin-bottom: 5px;
+      }
+
+      .project-tech {
+        color: #3498db;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+
+      .project-description {
+        color: #555;
+        line-height: 1.6;
+      }
+
+      .template1-controls {
+        padding: 20px;
+        text-align: center;
+        background: #f8f9fa;
+        border-top: 1px solid #eee;
+      }
+
+      .back-btn {
+        display: inline-block;
+        background: #2c3e50;
+        color: white;
+        padding: 12px 25px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        margin: 0 10px;
+      }
+
+      .print-btn {
+        display: inline-block;
+        background: #3498db;
+        color: white;
+        padding: 12px 25px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        margin: 0 10px;
+      }
+
+      @media print {
+        .template1-controls {
+          display: none;
+        }
+
+        .template1 {
+          box-shadow: none;
+          border-radius: 0;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .template1-contact {
+          flex-direction: column;
+          gap: 10px;
+          align-items: center;
+        }
+
+        .template1-section {
+          padding: 20px;
+        }
+
+        .template1-name {
+          font-size: 2.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="template1">
+      <div class="template1-header">
+        <h1 class="template1-name" id="name">Loading...</h1>
+        <div class="template1-title" id="title">Full Stack Developer</div>
+        <div class="template1-contact" id="contact-info">
+          <!-- Will be populated by JavaScript -->
+        </div>
+      </div>
+
+      <div class="template1-section">
+        <h2 class="template1-section-title">Summary</h2>
+        <p id="summary">Loading...</p>
+      </div>
+
+      <div class="template1-section">
+        <h2 class="template1-section-title">Experience</h2>
+        <div id="experience">
+          <!-- Will be populated by JavaScript -->
+        </div>
+      </div>
+
+      <div class="template1-section">
+        <h2 class="template1-section-title">Projects</h2>
+        <div id="projects">
+          <!-- Will be populated by JavaScript -->
+        </div>
+      </div>
+
+      <div class="template1-section">
+        <h2 class="template1-section-title">Skills</h2>
+        <div id="skills">
+          <!-- Will be populated by JavaScript -->
+        </div>
+      </div>
+
+      <div class="template1-section">
+        <h2 class="template1-section-title">Education</h2>
+        <div id="education">
+          <!-- Will be populated by JavaScript -->
+        </div>
+      </div>
+
+      <div class="template1-section">
+        <h2 class="template1-section-title">Certifications</h2>
+        <ul class="bullet-list" id="certifications">
+          <!-- Will be populated by JavaScript -->
+        </ul>
+      </div>
+
+      <div class="template1-controls">
+        <a href="../index.html" class="back-btn">
+          <i class="fas fa-arrow-left"></i> Back to Templates
+        </a>
+        <a href="#" class="print-btn" onclick="window.print();">
+          <i class="fas fa-print"></i> Print Resume
+        </a>
+      </div>
+    </div>
+
+    <script src="../js/resume-loader.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", async function () {
+        await resumeLoader.loadData();
+        const data = resumeLoader.data;
+
+        // Populate personal info
+        document.getElementById("name").textContent = data.personal.name;
+        document.getElementById("title").textContent = data.personal.title;
+        document.getElementById("summary").textContent = data.personal.summary;
+
+        // Populate contact info
+        const contactInfo = document.getElementById("contact-info");
+        contactInfo.innerHTML = `
+                <div class="template1-contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>${data.personal.phone}</span>
+                </div>
+                <div class="template1-contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>${data.personal.email}</span>
+                </div>
+                <div class="template1-contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </div>
+                <div class="template1-contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>${data.personal.location}</span>
+                </div>
+            `;
+
+        // Populate experience
+        document.getElementById("experience").innerHTML =
+          resumeLoader.renderExperience(data.experience);
+
+        // Populate projects
+        document.getElementById("projects").innerHTML =
+          resumeLoader.renderProjects(data.projects);
+
+        // Populate skills
+        document.getElementById("skills").innerHTML = resumeLoader.renderSkills(
+          data.skills
+        );
+
+        // Populate education
+        const education = document.getElementById("education");
+        if (data.education && data.education.length > 0) {
+          let eduHtml = "";
+          data.education.forEach((edu) => {
+            eduHtml += `
+                        <div class="experience-item">
+                            <h3 class="job-title">${edu.degree}</h3>
+                            <div class="company">${edu.institution}</div>
+                            <div class="date">${edu.period}</div>
+                            <p>${edu.details}</p>
+                        </div>
+                    `;
+          });
+          education.innerHTML = eduHtml;
+        }
+
+        // Populate certifications
+        const certs = document.getElementById("certifications");
+        if (data.certifications && data.certifications.length > 0) {
+          let certHtml = "";
+          data.certifications.forEach((cert) => {
+            certHtml += `<li>${cert}</li>`;
+          });
+          certs.innerHTML = certHtml;
+        }
+      });
+    </script>
+  </body>
+</html>

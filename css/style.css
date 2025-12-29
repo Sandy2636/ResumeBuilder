@@ -1,0 +1,243 @@
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.header h1 {
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.header .subtitle {
+    color: #7f8c8d;
+    font-size: 1.2rem;
+}
+
+.template-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.template-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.template-card:hover {
+    transform: translateY(-10px);
+}
+
+.template-preview {
+    height: 200px;
+    padding: 20px;
+}
+
+.traditional-preview {
+    background: linear-gradient(to right, #2c3e50, #4a6491);
+    display: flex;
+    flex-direction: column;
+}
+
+.traditional-preview .preview-header {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.traditional-preview .preview-header h3 {
+    color: #2c3e50;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.traditional-preview .preview-header p {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+.traditional-preview .preview-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.traditional-preview .preview-section {
+    background: rgba(255,255,255,0.9);
+    height: 10px;
+    border-radius: 4px;
+}
+
+.traditional-preview .preview-section:nth-child(2) {
+    width: 80%;
+}
+
+.traditional-preview .preview-section:nth-child(3) {
+    width: 70%;
+}
+
+.modern-preview {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 15px;
+}
+
+.modern-preview .preview-sidebar {
+    background: rgba(255,255,255,0.9);
+    border-radius: 8px;
+}
+
+.modern-preview .preview-main {
+    background: white;
+    border-radius: 8px;
+    padding: 15px;
+}
+
+.modern-preview .preview-section {
+    background: #ecf0f1;
+    height: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.modern-preview .preview-section:last-child {
+    width: 70%;
+}
+
+.creative-preview {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.creative-preview .creative-header {
+    background: rgba(255,255,255,0.9);
+    height: 30px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.creative-preview .preview-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 15px;
+    height: calc(100% - 45px);
+}
+
+.creative-preview .preview-left,
+.creative-preview .preview-right {
+    background: rgba(255,255,255,0.9);
+    border-radius: 8px;
+}
+
+.template-info {
+    padding: 25px;
+}
+
+.template-info h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.template-info p {
+    color: #7f8c8d;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.btn {
+    display: inline-block;
+    background: #3498db;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #2980b9;
+}
+
+.data-info {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.data-info h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+.data-info p {
+    color: #7f8c8d;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.data-info code {
+    background: #f8f9fa;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-family: monospace;
+    color: #e74c3c;
+}
+
+.btn-outline {
+    display: inline-block;
+    border: 2px solid #3498db;
+    color: #3498db;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background: #3498db;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .template-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .header h1 {
+        font-size: 2rem;
+    }
+}
